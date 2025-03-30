@@ -1,0 +1,46 @@
+html card
+
+
+        <div class="card-container">
+            <img src="" class="card-img-top" alt="..." />
+
+            <div class="card-body">
+                <p class="b-name">{product.name}</p>
+                <p class="price">Rs.{product.price}</p>
+                <button class="Add-to-Cart">
+                    Add To Cart
+                </button>
+            </div>
+        </div>
+
+
+style
+
+
+.card-container {
+    width: 14rem;
+    padding: 20px;
+}
+
+.b-name {
+    color: rgb(164, 164, 164);
+    font-weight: 500;
+    margin-top: 6px;
+    margin-bottom: 3px;
+
+}
+
+.Add-to-Cart {
+    border: none;
+    padding: 5px;
+    padding-left: 18px;
+    padding-right: 18px;
+    color: white;
+    background-color: orange;
+    font-weight: bold;
+    font-size: small;
+}
+
+.card-img-top:hover {
+    cursor: pointer;
+}
