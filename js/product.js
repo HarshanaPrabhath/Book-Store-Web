@@ -67,7 +67,7 @@ const functionCards = () => {
             
             <p class="bookauthor">Author : ${data.author}</p>
         </div>
-            <!-- <p class="description"></p> -->
+            
            
             <p class="price">${data.price}</p>
             <p class="rate">Ratings : 5.0⭐</p>

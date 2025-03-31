@@ -6,31 +6,193 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Store [In-development]</title>
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
 
     <!--Header -->
-    <section class="Header">
+    <header class="header">
         <div class="container-inner">
-            <a href="#" style="text-decoration: none;color:black;">
-                <div class="logo">
-                    <h1>BookShop</h1>
-                    <img src="./assets/title.png" alt="...">
-                </div>
-            </a>
-            <nav class="nav-link">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Books</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Cart</a></li>
-                </ul>
-            </nav>
-            <h1>PR</h1>
+          <a href="#" class="logo-link">
+            <div class="logo">
+              <h1>BookShop</h1>
+              <img src="./assets/title.png" alt="BookShop Logo">
+            </div>
+          </a>
+          <button class="hamburger" id="hamburger">
+            &#9776;
+          </button>
+          <nav class="nav-link" id="nav">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Books</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Cart</a></li>
+            </ul>
+          </nav>
         </div>
-    </section>
+      </header>
+
+    <button class="color">color</button>
+    <!--Slider-->
+    <div class="container-slider">
+        <div class="inner-container-slider">
+            
+        </div>
+    </div>
+
+    <!--Info Section-->
+    <div class="container-info">
+
+        <div class="container-info-box">
+            <img src="" alt="...">
+            <p>Free Shipping</p>
+            <p>Order More than $100</p>
+        </div>
+
+        <div class="container-info-box">
+            <img src="" alt="...">
+            <p>Secure Payment</p>
+            <p>100% Secure Payment</p>
+        </div>
+
+        <div class="container-info-box">
+            <img src="" alt="...">
+            <p>24/7 Support</p>
+            <p>Call us anytime</p>
+        </div>
+
+        <div class="container-info-box">
+            <img src="" alt="...">
+            <p>Eassy To Access</p>
+            <p>User Friendly</p>
+        </div>
+
+
+    </div>
+
+    <!--Featured Book-->
+    <h1 style="text-align: center;">Featured Book</h1>
+
+    <div class="container-Featured-Book">
+
+        <div class="card-container">
+            <img src="" class="card-img-top" alt="..." />
+
+            <div class="card-body">
+                <p class="b-name">{product.name}</p>
+                <p class="price">Rs.{product.price}</p>
+                <button class="Add-to-Cart">
+                    Add To Cart
+                </button>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <img src="" class="card-img-top" alt="..." />
+
+            <div class="card-body">
+                <p class="b-name">{product.name}</p>
+                <p class="price">Rs.{product.price}</p>
+                <button class="Add-to-Cart">
+                    Add To Cart
+                </button>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <img src="" class="card-img-top" alt="..." />
+
+            <div class="card-body">
+                <p class="b-name">{product.name}</p>
+                <p class="price">Rs.{product.price}</p>
+                <button class="Add-to-Cart">
+                    Add To Cart
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!--mini info for discount -->
+    <div class="container-discount">
+        <div class="left">
+            <h3>Browse &</h3>
+            <h4>Select Your Choices</h4>
+            <p>
+                Find the best books from your favorite writers,explore hundreds of books with all possible,categories,
+                take advantage of the 50% discount and musch more.
+            </p>
+        </div>
+        <div class="right">
+            <img src="" alt="...">
+        </div>
+    </div>
+
+
+    <!--New Arrivals Book-->
+    <h1 style="text-align: center;">New Arrivals Book</h1>
+
+    <div class="container-Featured-Book">
+
+        <div class="card-container">
+            <img src="" class="card-img-top" alt="..." />
+
+            <div class="card-body">
+                <p class="b-name">{product.name}</p>
+                <p class="price">Rs.{product.price}</p>
+                <button class="Add-to-Cart">
+                    Add To Cart
+                </button>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <img src="" class="card-img-top" alt="..." />
+
+            <div class="card-body">
+                <p class="b-name">{product.name}</p>
+                <p class="price">Rs.{product.price}</p>
+                <button class="Add-to-Cart">
+                    Add To Cart
+                </button>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <img src="" class="card-img-top" alt="..." />
+
+            <div class="card-body">
+                <p class="b-name">{product.name}</p>
+                <p class="price">Rs.{product.price}</p>
+                <button class="Add-to-Cart">
+                    Add To Cart
+                </button>
+            </div>
+        </div>
+       
+        <div class="card-container">
+            <img src="" class="card-img-top" alt="..." />
+
+            <div class="card-body">
+                <p class="b-name">{product.name}</p>
+                <p class="price">Rs.{product.price}</p>
+                <button class="Add-to-Cart">
+                    Add To Cart
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!--bottom box -->
+    <div class="container-bottom-box">
+        <h1 style="text-transform: uppercase;">Shopping with us</h1>
+        <button class="button-shop-now">Shop Now</button>
+    </div>
+
 
 
 
@@ -83,6 +245,7 @@
             </div>
         </div>
     </section>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
