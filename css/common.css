@@ -134,73 +134,99 @@
 
 
 /*============HEADER============ */
+.header{
+  margin-top: 7px;
+}
+.logo-link{
+  text-decoration: none;
+}
+.container-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.logo{
+  display: flex;
+  align-items: center;
+  color:#333;
+}
 
-.header {
-  background: #fff;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #ddd;
-  position: relative;
-}
-.logo {
+/* Default Navigation Styles */
+.nav-link {
+  position: relative; /* Default for larger screens */
   display: flex;
   align-items: center;
 }
-.logo img {
-  height: 40px;
-  margin-left: 10px;
-}
+
+/* Navigation list */
 .nav-link ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
+  gap: 20px;
+  padding: 0;
 }
-.nav-link ul li {
-  margin: 0 15px;
+
+.nav-link li {
+  padding: 10px 0;
 }
-.nav-link ul li a {
+
+.nav-link a {
   text-decoration: none;
-  color: black;
+  color: #333;
   font-size: 18px;
 }
+
+/* Hide close button on large screens */
+.close-icon {
+  display: none;
+}
+
+/* Hamburger Menu */
 .hamburger {
+  display: none; /* Hidden on large screens */
   font-size: 30px;
   background: none;
   border: none;
   cursor: pointer;
-  display: none;
 }
-@media (max-width: 768px) {
+
+/* Responsive Sidebar for Mobile */
+@media screen and (max-width: 768px) {
   .hamburger {
-    display: block;
+      display: block; /* Show hamburger on small screens */
   }
+
   .nav-link {
-    display: none;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    right: -250px;
-    background: white;
-    width: 250px;
-    height: 100vh;
-    box-shadow: -4px 0px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 0;
-    transition: right 0.3s ease-in-out;
-    padding-top: 60px;
+      position: fixed;
+      top: 0;
+      right: -50%; /* Initially hidden */
+      width: 50%; /* Sidebar width = 50% of the screen */
+      height: 100%;
+      background: #fff;
+      transition: right 0.3s ease-in-out;
+      box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.2);
+      flex-direction: column;
+      align-items: center;
+      padding-top: 50px;
   }
+
   .nav-link ul {
-    flex-direction: column;
-    padding: 0;
+      flex-direction: column;
+      align-items: center;
   }
-  .nav-link ul li {
-    text-align: center;
-    padding: 15px 0;
+
+  .close-icon {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
   }
-  .nav-link.active {
-    right: 0;
-    display: flex;
+
+  .show-nav {
+      right: 0; /* Slide in */
   }
 }

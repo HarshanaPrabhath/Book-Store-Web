@@ -1,11 +1,13 @@
-const hamburger = document.getElementById("hamburger");
-const nav = document.getElementById("nav");
+document.addEventListener("DOMContentLoaded", function () {
+  const nav = document.getElementById("nav");
+  const hamburger = document.getElementById("hamburger");
+  const closeIcon = document.getElementById("close-icon");
 
-hamburger.addEventListener("click", function() {
-  nav.classList.toggle("active");
-  if (nav.classList.contains("active")) {
-    hamburger.innerHTML = "&#10006;";
-  } else {
-    hamburger.innerHTML = "&#9776;";
-  }
+  hamburger.addEventListener("click", () => {
+      nav.classList.add("show-nav");
+  });
+
+  closeIcon.addEventListener("click", () => {
+      nav.classList.remove("show-nav");
+  });
 });
