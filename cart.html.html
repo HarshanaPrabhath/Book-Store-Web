@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/cartstyle.css.css">
+    <script src="./js/cart.js"></script>
+</head>
+<body>
+    
+    <!--Header -->
+    <section class="Header">
+        <div class="container-inner">
+            <a href="#" style="text-decoration: none;color:black;">
+                <div class="logo">
+                    <h1>BookShop</h1>
+                    <img src="./assets/title.png" alt="...">
+                </div>
+            </a>
+            <nav class="nav-link">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Books</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Cart</a></li>
+                </ul>
+            </nav>
+            <h1>PR</h1>
+        </div>
+    </section>
+<!-- body -->
+<h3><center>MY CART</center></h3>
+<div id="description" class="mycart">
+    <div id="bookcover" class="mycart">
+        <img class="image" src="C:\shonali bday\GKG_1852.jpg" alt="The Cover Image of Book" width="80%" height="auto">
+    </div>
+    <div id="info">
+        <form>
+            <p id="bookname" class="details">Book Name</p>
+            <input type="text" name="bookname" placeholder="bookname">
+            <p id="author" class="details">Book Author</p>
+            <input type="text" name="author" placeholder="author">
+            <p id="price" class="details">Book Price</p>
+            <input type="text" name="price" placeholder="price">
+            <br>
+            <div id="count">
+            <button id="add" class="btn" type="button">+</button> Count <button id="remove" class="btn" type="button">-</button>
+            </div>
+            <br><br>
+        </form>
+    </div>
+</div>
+<div id="order-container">
+    <button id="order" class="btn" type="submit">Order</button>
+</div>
+</body>
+
+
+    <!-- Footer -->
+    <section class="footer">
+        <div class="footer-row">
+            <div class="footer-col">
+                <h4>Useful Links</h4>
+                <ul class="links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Cart</a></li>
+                    <li><a href="#">Orders</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul class="links">
+                    <li><a href="#">Customer Feedback</a></li>
+                    <li><a href="#">Offers</a></li>
+                    <li><a href="#">Tracking</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul class="links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>
+                    Subscribe to our newsletter for a weekly dose
+                    of news, updates, helpful tips, and
+                    exclusive offers.
+                </p>
+                <form action="#">
+                    <input type="text" placeholder="Your email" required>
+                    <button type="submit">SUBSCRIBE</button>
+                </form>
+                <div class="icons">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-github"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

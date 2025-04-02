@@ -1,0 +1,15 @@
+#ordertable{
+    border:5px solid blue;
+    text-align: center;
+    display:grid;
+    font-family:calibri;
+    font-size: 17px;
+}
+th{
+    font-weight:bold;
+    background-color:aliceblue;
+    border-bottom:blue;
+}
+td:even-child{
+    background-color:rgb(98, 159, 213);
+}
