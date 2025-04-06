@@ -11,15 +11,17 @@
 <body>
     
     <!--Header -->
-    <section class="Header">
+    <header class="header">
         <div class="container-inner">
-            <a href="#" style="text-decoration: none;color:black;">
+            <a href="#" class="logo-link">
                 <div class="logo">
                     <h1>BookShop</h1>
-                    <img src="./assets/title.png" alt="...">
+                    <img src="./assets/title.png" alt="BookShop Logo" class="logo-resize">
                 </div>
             </a>
-            <nav class="nav-link">
+            <button class="hamburger" id="hamburger">&#9776;</button>
+            <nav class="nav-link" id="nav">
+                <button class="close-icon" id="close-icon">&times;</button>
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Books</a></li>
@@ -28,36 +30,39 @@
                     <li><a href="#">Cart</a></li>
                 </ul>
             </nav>
-            <h1>PR</h1>
         </div>
-    </section>
-<!-- body -->
-<h3><center>MY CART</center></h3>
-<div id="description" class="mycart">
-    <div id="bookcover" class="mycart">
-        <img class="image" src="C:\shonali bday\GKG_1852.jpg" alt="The Cover Image of Book" width="80%" height="auto">
-    </div>
-    <div id="info">
-        <form>
-            <p id="bookname" class="details">Book Name</p>
-            <input type="text" name="bookname" placeholder="bookname">
-            <p id="author" class="details">Book Author</p>
-            <input type="text" name="author" placeholder="author">
-            <p id="price" class="details">Book Price</p>
-            <input type="text" name="price" placeholder="price">
-            <br>
-            <div id="count">
-            <button id="add" class="btn" type="button">+</button> Count <button id="remove" class="btn" type="button">-</button>
-            </div>
-            <br><br>
-        </form>
-    </div>
-</div>
-<div id="order-container">
-    <button id="order" class="btn" type="submit">Order</button>
-</div>
-</body>
+    </header>
 
+<!-- body -->
+    <div class="containre-cart-iteams">
+        <div class="inner-cart">
+            <div class="cart-Card">
+                <div class="">Image</div>
+                <div class="">description</div>
+                <div class="">price</div>
+                <div class="">increment button</div>
+                <div class="">total</div>
+                <div class="">cancel-btn</div>
+            </div>
+            <div class="cart-Card">
+                <div class="">Image</div>
+                <div class="">description</div>
+                <div class="">price</div>
+                <div class="">increment button</div>
+                <div class="">total</div>
+                <div class="">cancel-btn</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="place-order">
+        <h2>your Total price is:</h2>
+        <h2>Rs.10000</h2>
+
+        <button>place Order</button>
+        <button>Remove Order</button>
+
+    </div>
 
     <!-- Footer -->
     <section class="footer">

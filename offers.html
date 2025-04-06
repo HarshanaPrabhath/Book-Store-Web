@@ -7,19 +7,12 @@
     <title>Book Store [In-development]</title>
     <link rel="stylesheet" href="css/common.css">
     <style>
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-        }
-        header {
-            background-color: #d359d7;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            top: 0;
-            position: sticky;
         }
         .container {
             width: 80%;
@@ -45,15 +38,17 @@
 <body>
 
     <!--Header -->
-    <section class="Header">
+    <header class="header">
         <div class="container-inner">
-            <a href="#" style="text-decoration: none;color:black;">
+            <a href="#" class="logo-link">
                 <div class="logo">
                     <h1>BookShop</h1>
-                    <img src="./assets/title.png" alt="...">
+                    <img src="./assets/title.png" alt="BookShop Logo" class="logo-resize">
                 </div>
             </a>
-            <nav class="nav-link">
+            <button class="hamburger" id="hamburger">&#9776;</button>
+            <nav class="nav-link" id="nav">
+                <button class="close-icon" id="close-icon">&times;</button>
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Books</a></li>
@@ -62,13 +57,13 @@
                     <li><a href="#">Cart</a></li>
                 </ul>
             </nav>
-            <h1>PR</h1>
         </div>
-    </section>
+    </header>
+
 
     <body>
     <header>
-        <h1>Special Offers</h1>
+        <h1 style="text-align: center;">Special Offers</h1>
         <br><br>
     </header>
     <div class="container">
@@ -138,7 +133,7 @@
             </div>
         </div>
     </section>
-   
+   <script src="js/main.js"></script>
 </body>
 
 </html>

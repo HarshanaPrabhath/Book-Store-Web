@@ -10,15 +10,17 @@
 <body>
     
     <!--Header -->
-    <section class="Header">
+    <header class="header">
         <div class="container-inner">
-            <a href="#" style="text-decoration: none;color:black;">
+            <a href="#" class="logo-link">
                 <div class="logo">
                     <h1>BookShop</h1>
-                    <img src="./assets/title.png" alt="...">
+                    <img src="./assets/title.png" alt="BookShop Logo" class="logo-resize">
                 </div>
             </a>
-            <nav class="nav-link">
+            <button class="hamburger" id="hamburger">&#9776;</button>
+            <nav class="nav-link" id="nav">
+                <button class="close-icon" id="close-icon">&times;</button>
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Books</a></li>
@@ -27,29 +29,21 @@
                     <li><a href="#">Cart</a></li>
                 </ul>
             </nav>
-            <h1>PR</h1>
         </div>
-    </section>
+    </header>
 <!-- body -->
-<div id="ordertable">
-    <table>
-        <tablehead>
-            <tr>
-                <th>No.</th>
-                <th>Description</th>
-                <th>Quantity</th>
-                <th>Price</th>
-            </tr>
-        </tablehead>
-        <tablebody>
-            <td>01</td>
-            <td>Me Before You</td>
-            <td>1</td>
-            <td>Rs.1500.00</td>
-        </tablebody>
-    </table>
-</div>
-
+    <div class="order-container">
+        <div class="Order-Card">
+            <h2>Order number</h2>
+            <p>description</p>
+            <button>Remove Your Order</button>
+        </div>
+        <div class="Order-Card">
+            <h2>Order number</h2>
+            <p>description</p>
+            <button>Remove Your Order</button>
+        </div>
+    </div>
 
     <!-- Footer -->
     <section class="footer">

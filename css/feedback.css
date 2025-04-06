@@ -1,0 +1,56 @@
+.container-feedback{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.inner-feedback{
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.feedback-body{
+    padding: 20px;
+}
+
+.box input{
+    width: 100%;
+}
+
+.box textarea{
+    resize: none;
+}
+
+.submit-btn{
+    width: 100%;
+}
+
+.container-feedbacks{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+}
+
+
+.container-feed-Card{
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.inner-container{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    gap: 30px;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+}

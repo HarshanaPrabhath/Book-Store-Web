@@ -6,27 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Store [In-development]</title>
     <link rel="stylesheet" href="css/common.css">
-    <style>
-        .feedback{
-            background-color: #d359d7;;
-            color: white;
-            padding: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/feedback.css">
 </head>
 
 <body>
 
     <!--Header -->
-    <section class="Header">
+    <header class="header">
         <div class="container-inner">
-            <a href="#" style="text-decoration: none;color:black;">
+            <a href="#" class="logo-link">
                 <div class="logo">
                     <h1>BookShop</h1>
-                    <img src="./assets/title.png" alt="...">
+                    <img src="./assets/title.png" alt="BookShop Logo" class="logo-resize">
                 </div>
             </a>
-            <nav class="nav-link">
+            <button class="hamburger" id="hamburger">&#9776;</button>
+            <nav class="nav-link" id="nav">
+                <button class="close-icon" id="close-icon">&times;</button>
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Books</a></li>
@@ -35,34 +31,79 @@
                     <li><a href="#">Cart</a></li>
                 </ul>
             </nav>
-            <h1>PR</h1>
+        </div>
+    </header>
+
+    <section class="form-of-feedback">
+        <div class="container-feedback">
+
+            <div class="inner-feedback">
+                <h1 style="text-align: center;">Give Us To Feedback</h1>
+                <div class="feedback-body">
+                    <div class="box">
+                        <p>Enter Name:</p>
+                        <input type="text" name="" id="">
+                    </div>
+
+                    <div class="box">
+                        <p>Enter Email:</p>
+                        <input type="text" name="" id="">
+                    </div>
+
+                    <div class="box">
+                        <p>Enter Feedback:</p>
+                        <textarea name="" id=""></textarea>
+                    </div>
+                    <button class="submit-btn">Submit</button>
+                </div>
+            </div>
         </div>
     </section>
-    <section class="feedback">
-        <div class="container-inner">
-            <div><h2>Customer Feedback</h2></div>
-            
+
+    <h1 style="text-align: center;">Reviews of Customers</h1>
+
+    <div class="container-feedbacks">
+        
+        <div class="container-feed-Card">
+            <div class="inner-container">
+                <img src="" alt="...">
+                <div class="body">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur hic repudiandae, voluptate,
+                        delectus aliquid qui dolorem doloremque minima sunt doloribus, sapiente fugit. Ipsam, sed
+                        doloremque. Accusamus magnam eveniet quidem. Recusandae!
+                    </p>
+                    <p>*******</p>
+                </div>
+            </div>
         </div>
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-            
-            <label for="feedback">Feedback:</label>
-            <textarea id="feedback" name="feedback" rows="4" required></textarea><br><br>
-            
-            <button type="submit">Submit</button>
-        </form>
-        <div>
-            <h2>Reviwes</h2>
-            <p>good web site</p>
+
+        <div class="container-feed-Card">
+            <div class="inner-container">
+                <img src="" alt="...">
+                <div class="body">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur hic repudiandae, voluptate,
+                        delectus aliquid qui dolorem doloremque minima sunt doloribus, sapiente fugit. Ipsam, sed
+                        doloremque. Accusamus magnam eveniet quidem. Recusandae!
+                    </p>
+                    <p>*******</p>
+                </div>
+            </div>
         </div>
-    </section>
 
-
-
+        <div class="container-feed-Card">
+            <div class="inner-container">
+                <img src="" alt="...">
+                <div class="body">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur hic repudiandae, voluptate,
+                        delectus aliquid qui dolorem doloremque minima sunt doloribus, sapiente fugit. Ipsam, sed
+                        doloremque. Accusamus magnam eveniet quidem. Recusandae!
+                    </p>
+                    <p>*******</p>
+                </div>
+            </div>
+        </div>
+    
+    </div>
 
     <!-- Footer -->
     <section class="footer">
@@ -112,6 +153,8 @@
             </div>
         </div>
     </section>
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>
