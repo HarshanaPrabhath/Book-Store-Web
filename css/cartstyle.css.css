@@ -1,19 +1,94 @@
-
-.containre-cart-iteams{
+.containre-cart-iteams {
     margin-top: 20px;
 }
 
-.cart-Card{
+.cart-Card {
     margin: 20px;
-    padding: 60px;
+    padding: 30px;
     border-radius: 8px;
-    background-color: antiquewhite;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-.place-order{
+.place-order {
     margin-top: 40px;
     text-align: center;
+}
+
+.btn-increment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.btn-increment button,
+.btn-cancel button {
+    padding: 7px;
+}
+
+.place-order-btn,
+.remove-order-btn {
+    padding: 10px;
+}
+
+
+.description {
+    font-size: large;
+}
+
+.image-resize {
+    width: 100px;
+}
+
+
+@media (max-width: 774px) {
+    .image-resize {
+        width: 50px;
+    }
+
+    .description,
+    .price,
+    .total {
+        font-size: small;
+    }
+
+    .place-order-btn,
+    .remove-order-btn {
+        padding: 8px;
+    }
+
+    .btn-increment button,
+    .btn-cancel button {
+        padding: 2px;
+        font-size: small;
+    }
+
+}
+
+
+@media (max-width: 580px) {
+    .image-resize {
+        display: none;
+    }
+
+    .description,
+    .price,
+    .total {
+        font-size: small;
+    }
+
+    .place-order-btn,
+    .remove-order-btn {
+        padding: 8px;
+    }
+
+    .btn-increment button,
+    .btn-cancel button {
+        padding: 2px;
+        font-size: small;
+    }
+
 }

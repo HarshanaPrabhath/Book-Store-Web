@@ -1,0 +1,149 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;   
+}
+
+.second-header{
+    margin-top: 70px;
+    background: linear-gradient(to right, #5ff7ff, #2277ee);
+    padding: 20px;
+}
+
+.about, .mission, .why-choose-us ,.features, .team {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+}
+
+.features-grid {
+    display: grid;
+    gap: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.feature-box {
+    background: #00f2ff;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.feature-box:hover {
+    background: #1247f5;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.team-grid {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: auto  auto auto;
+    align-items: center;
+    padding: 20px;
+}
+
+.team-member {
+    background: #00f2ff;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.team-member:hover {
+    background: #1247f5;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+}
+
+.btn {
+    margin-top: 50px;
+    display: inline-block;
+    padding: 12px 25px;
+    background: #00ffff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #15ff00;
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 712px) {
+    
+    .content {
+        flex-direction: column;
+    }
+    .text {
+        text-align: center;
+    }
+    .btn {
+        display: block;
+        margin: 15px auto 0;
+    }
+
+    .team-grid {
+     gap: 40px;
+     grid-template-columns: auto ;
+    }
+
+}
+
+
+
+@media (max-width: 768px) {
+    
+    .content {
+        flex-direction: column;
+    }
+    .text {
+        text-align: center;
+    }
+    .btn {
+        display: block;
+        margin: 15px auto 0;
+    }
+
+}
+
