@@ -35,32 +35,16 @@
 
 <!-- body -->
     <div class="containre-cart-iteams">
-        <div class="inner-cart">
-            
-            <div class="cart-Card">
-                <img src="/assets/product page images/matt-ridley-H-LIL57PHCc-unsplash.jpg" alt="...." class="image-resize">
-                <div class="description">How To Innovation Works</div>
-                <div class="price">Rs.<span>10000.00</span></div>
-                <div class="btn-increment">
-                    <button>+</button>
-                    <button>-</button>
-                </div>
-                <div class="total">total</div>
-                <div class="btn-cancel">
-                    <button>X</button>
-                </div>
-            </div>
-
-
-
-        </div>
+        
+        <!-- Render Products -->
+        <div class="inner-cart" id="inner-cart"></div>
     </div>
 
     <div class="place-order">
         <h2>your Total price is:</h2>
-        <h2>Rs.10000</h2>
-
-        <button class="place-order-btn">place Order</button>
+        <h2>Rs. <span id="price"></span></h2>
+ 
+        <button class="place-order-btn" id="place-order-btn">place Order</button>
         <button class="remove-order-btn" >Remove Order</button>
 
     </div>

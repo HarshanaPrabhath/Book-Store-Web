@@ -1,0 +1,16 @@
+h3 {
+    color: blueviolet;
+    margin: 15px;
+    margin-bottom: 15px;
+    padding: 0px;
+}
+
+.page {
+    margin-left: 150px;
+    margin-right: 150px;
+
+}
+
+.topic {
+    padding: 0px;
+}

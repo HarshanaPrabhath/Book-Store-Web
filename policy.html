@@ -6,40 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Store [In-development]</title>
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/policy.css">
+
 </head>
-<style>
-    h3 {
-        color: blueviolet;
-        margin: 15px;
-        margin-bottom: 15px;
-        padding: 0px;
-    }
-
-    .page {
-        margin-left: 150px;
-        margin-right: 150px;
-
-    }
-
-    .topic {
-        padding: 0px;
-    }
-
-    
-</style>
-
 <body>
 
     <!--Header -->
-    <section class="Header">
+    <header class="header">
         <div class="container-inner">
-            <a href="#" style="text-decoration: none;color:black;">
+            <a href="#" class="logo-link">
                 <div class="logo">
                     <h1>BookShop</h1>
-                    <img src="./assets/title.png" alt="...">
+                    <img src="./assets/title.png" alt="BookShop Logo" class="logo-resize">
                 </div>
             </a>
-            <nav class="nav-link">
+            <button class="hamburger" id="hamburger">&#9776;</button>
+            <nav class="nav-link" id="nav">
+                <button class="close-icon" id="close-icon">&times;</button>
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Books</a></li>
@@ -48,8 +31,10 @@
                     <li><a href="#">Cart</a></li>
                 </ul>
             </nav>
-            <h1>PR</h1>
         </div>
+    </header>
+
+
     </section>
     <div class="page">
         <div clss="topic">
@@ -180,6 +165,9 @@
             </div>
         </div>
     </section>
+
+    <script src="/js/main.js"></script>
+
 </body>
 
 </html>
