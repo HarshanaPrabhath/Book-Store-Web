@@ -132,15 +132,19 @@
 
 
 
-.container-Featured-Book {
+.container-Book {
     margin-top: 20px;
     display: grid;
     align-items: center;
     justify-content: center;
-    grid-template-columns: auto auto auto;
-    gap: 10px;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
 }
 
+.card-img{
+    width: 150px;
+    border-radius: 8px;
+}
 
 .card-container {
     width: 14rem;
@@ -203,7 +207,6 @@
     width: 250px;
     height: 90px;
 }
-
 
 
 /*  */

@@ -86,6 +86,7 @@ renderBooks(cardContainer);
 renderBooks(cardContainer2);
 renderBooks(cardContainer3);
 
+
 // Cart functionality
 document.addEventListener("DOMContentLoaded", () => {
     const buttons = document.querySelectorAll(".addCart");
@@ -102,10 +103,10 @@ document.addEventListener("DOMContentLoaded", () => {
             };
 
 
-            // Get cart from localStorage or initialize as empty array
+            // Get cart from localStorage
             let cart = JSON.parse(localStorage.getItem("Cart")) || [];
 
-            // Check if product already exists in cart
+            // Check if product exists
             let isProduct = null;
             for (let i = 0; i < cart.length; i++) {
                 if (cart[i].id === product.id) {
@@ -114,14 +115,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
 
-            // Update the cart if the product is found, else add the new product
+            // Update the cart
             if (isProduct) {
                 isProduct.quantity += 1;
             } else {
                 cart.push(product);
             }
 
-            // Save the updated cart to localStorage
+            // Save the localStorage
             localStorage.setItem("Cart", JSON.stringify(cart));
             alert(`${product.title} added to cart!`);
         });

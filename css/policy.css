@@ -8,9 +8,25 @@ h3 {
 .page {
     margin-left: 150px;
     margin-right: 150px;
-
 }
 
 .topic {
     padding: 0px;
+}
+
+@media (max-width: 616px) {
+    .page {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .topic p{
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .page {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
 }

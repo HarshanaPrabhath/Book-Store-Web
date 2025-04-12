@@ -21,7 +21,7 @@ document.getElementById("sign-UP").addEventListener("submit", (e) => {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    const user = { name, email, password };
+    const user = { name:name, email:email, password:password };
     console.log(user);
     
 
