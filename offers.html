@@ -1,114 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Store [In-development]</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/offers.css">
     
 </head>
 
 <body>
+=======
+    <link rel="stylesheet" href="css/common.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+      }
+      .offer {
+        background: white;
+        margin: 20px 0;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .offer h2 {
+        margin-top: 0;
+      }
+      .offer p {
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+>>>>>>> 1137b27f667debe1ea9a3f9186ca239bd4d8836a
 
+  <body>
     <!--Header -->
     <header class="header">
-        <div class="container-inner">
-            <a href="#" class="logo-link">
-                <div class="logo">
-                    <h1>BookShop</h1>
-                    <img src="./assets/title.png" alt="BookShop Logo" class="logo-resize">
-                </div>
-            </a>
-            <button class="hamburger" id="hamburger">&#9776;</button>
-            <nav class="nav-link" id="nav">
-                <button class="close-icon" id="close-icon">&times;</button>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Books</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Cart</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="container-inner">
+        <a href="#" class="logo-link">
+          <div class="logo">
+            <h1>BookShop</h1>
+            <img
+              src="./assets/title.png"
+              alt="BookShop Logo"
+              class="logo-resize"
+            />
+          </div>
+        </a>
+        <button class="hamburger" id="hamburger">&#9776;</button>
+        <nav class="nav-link" id="nav">
+          <button class="close-icon" id="close-icon">&times;</button>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./product.html">Books</a></li>
+            <li><a href="./aboutus.html">About Us</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+            <li><a href="./cart.html">Cart</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-
 
     <body>
-    <header>
-        <h1 style="text-align: center;">Special Offers</h1>
-        <br><br>
-    </header>
-    <div class="container">
+      <header>
+        <h1 style="text-align: center">Special Offers</h1>
+        <br /><br />
+      </header>
+      <div class="container">
         <div class="offer">
-            <h2>Offer 1: 50% Off on All Items</h2><br>
-            <p>Get 50% off on all items in our store. This offer is valid till the end of the month. Don't miss out on this amazing deal!</p><br>
+          <h2>Offer 1: 50% Off on All Items</h2>
+          <br />
+          <p>
+            Get 50% off on all items in our store. This offer is valid till the
+            end of the month. Don't miss out on this amazing deal!
+          </p>
+          <br />
         </div>
         <div class="offer">
-            <h2>Offer 2: Buy One Get One Free</h2><br>
-            <p>Buy one item and get another item of equal or lesser value for free. This offer is valid for a limited time only.</p><br>
+          <h2>Offer 2: Buy One Get One Free</h2>
+          <br />
+          <p>
+            Buy one item and get another item of equal or lesser value for free.
+            This offer is valid for a limited time only.
+          </p>
+          <br />
         </div>
         <div class="offer">
-            <h2>Offer 3: Free Shipping on Orders Over $50</h2><br>
-            <p>Enjoy free shipping on all orders over $50. Shop now and save on shipping costs!</p><br>
+          <h2>Offer 3: Free Shipping on Orders Over $50</h2>
+          <br />
+          <p>
+            Enjoy free shipping on all orders over $50. Shop now and save on
+            shipping costs!
+          </p>
+          <br />
         </div>
-    </div>
-</body>
-
-
+      </div>
+    </body>
 
     <!-- Footer -->
     <section class="footer">
-        <div class="footer-row">
-            <div class="footer-col">
-                <h4>Useful Links</h4>
-                <ul class="links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Cart</a></li>
-                    <li><a href="#">Orders</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Explore</h4>
-                <ul class="links">
-                    <li><a href="#">Customer Feedback</a></li>
-                    <li><a href="#">Offers</a></li>
-                    <li><a href="#">Tracking</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <ul class="links">
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">FAQ</a></li>
-                </ul>
-            </div>
-        
-            <div class="footer-col">
-                <h4>Newsletter</h4>
-                <p>
-                    Subscribe to our newsletter for a weekly dose
-                    of news, updates, helpful tips, and
-                    exclusive offers.
-                </p>
-                <form action="#">
-                    <input type="text" placeholder="Your email" required>
-                    <button type="submit">SUBSCRIBE</button>
-                </form>
-                <div class="icons">
-                    <i class="fa-brands fa-facebook-f"></i>
-                    <i class="fa-brands fa-twitter"></i>
-                    <i class="fa-brands fa-linkedin"></i>
-                    <i class="fa-brands fa-github"></i>
-                </div>
-            </div>
+      <div class="footer-row">
+        <div class="footer-col">
+          <h4>Useful Links</h4>
+          <ul class="links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./aboutus.html">About Us</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+            <li><a href="./cart.html">Cart</a></li>
+            <li><a href="./order.html">Orders</a></li>
+          </ul>
         </div>
-    </section>
-   <script src="js/main.js"></script>
-</body>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="links">
+            <li><a href="#">Customer Feedback</a></li>
+            <li><a href="#">Offers</a></li>
+            <li><a href="#">Tracking</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul class="links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
 
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>
+            Subscribe to our newsletter for a weekly dose of news, updates,
+            helpful tips, and exclusive offers.
+          </p>
+          <form action="#">
+            <input type="text" placeholder="Your email" required />
+            <button type="submit">SUBSCRIBE</button>
+          </form>
+          <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-github"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/main.js"></script>
+  </body>
 </html>
