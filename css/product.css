@@ -7,10 +7,13 @@
 }
 
 h1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding-left: 30px;
 }
 
 .content {
+  margin-top: 4%;
   margin-left: 6%;
   margin-right: 8%;
 }
@@ -105,19 +108,13 @@ h1 {
   font-size: 15px;
 }
 
-
-
-
-
-@media (max-width:1392px) {
-
+@media (max-width: 1392px) {
   .container {
     grid-template-columns: auto auto;
   }
 }
 
-@media (max-width:784px) {
-
+@media (max-width: 784px) {
   .container {
     grid-template-columns: auto auto;
   }
@@ -125,7 +122,6 @@ h1 {
   .container .containerCard .bookauthor {
     font-size: 18px;
     padding: 0;
-    
   }
 
   .container .containerCard .price {
@@ -137,12 +133,10 @@ h1 {
     font-size: 18px;
     padding: 0;
     margin-top: 36px;
-    
   }
 }
 
-@media (max-width:746px) {
-
+@media (max-width: 746px) {
   .container {
     grid-template-columns: auto;
   }
@@ -150,7 +144,6 @@ h1 {
   .container .containerCard .bookauthor {
     font-size: 18px;
     padding: 0;
-    
   }
 
   .container .containerCard .price {
@@ -162,13 +155,11 @@ h1 {
     font-size: 18px;
     padding: 0;
     margin-top: 36px;
-
   }
 }
 
-@media (max-width:528px) {
-
+@media (max-width: 528px) {
   .container {
-   margin-left: -30px;
+    margin-left: -30px;
   }
 }
