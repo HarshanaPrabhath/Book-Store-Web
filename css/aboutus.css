@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -8,6 +9,7 @@ body {
     margin-top: 70px;
     background: linear-gradient(to right, #5ff7ff, #2277ee);
     padding: 20px;
+    color: white;
 }
 
 .about, .mission, .why-choose-us ,.features, .team {
@@ -18,6 +20,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     max-width: 1000px;
+
 }
 
 .features-grid {
@@ -28,7 +31,7 @@ body {
 }
 
 .feature-box {
-    background: #00f2ff;
+    background:rgb(255, 180, 41);
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -36,8 +39,7 @@ body {
 }
 
 .feature-box:hover {
-    background: #1247f5;
-    transform: scale(1.05);
+    transform: scale(1.08);
     cursor: pointer;
 }
 
@@ -50,7 +52,7 @@ body {
 }
 
 .team-member {
-    background: #00f2ff;
+    background:rgb(135, 134, 134);
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -59,8 +61,7 @@ body {
 }
 
 .team-member:hover {
-    background: #1247f5;
-    transform: scale(1.05);
+    transform: scale(1.09);
     cursor: pointer;
 }
 
@@ -88,7 +89,7 @@ body {
     margin-top: 50px;
     display: inline-block;
     padding: 12px 25px;
-    background: #00ffff;
+    background:orange;
     color: white;
     text-decoration: none;
     border-radius: 8px;
