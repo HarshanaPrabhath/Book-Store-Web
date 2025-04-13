@@ -103,7 +103,7 @@ function renderCart() {
         
 
         // Clear cart after placing order
-        localStorage.removeItem("cart");
+        localStorage.removeItem("Cart");
     
         alert("Order placed successfully!");
     
