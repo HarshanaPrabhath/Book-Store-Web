@@ -162,6 +162,7 @@ body{
 .nav-link ul {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 20px;
   padding: 0;
 }
@@ -193,7 +194,6 @@ body{
   .hamburger {
       display: block; 
   }
-
   .nav-link {
       position: fixed;
       top: 0;
@@ -227,4 +227,28 @@ body{
   .show-nav {
       right: 0;
   }
+
+  #user-info {
+    margin-left: 0;
+  }
+}
+
+
+#auth-action{
+  color: blue;
+  font-size: larger;
+
+}
+
+.user-logged{
+    color: black;
+    font-size: large;
+    background-color: greenyellow;
+    padding: 10px;
+    cursor: pointer;
+    border-radius:50px;
+}
+
+#user-info{
+  margin-left: 40px;
 }

@@ -63,6 +63,7 @@ function renderCart() {
         });
     });
 
+    // cart price show case 
     let totalSumOfProducts = 0.00;
     for (let i = 0; i < cart.length; i++) {
         totalSumOfProducts += cart[i].price * cart[i].quantity;
@@ -70,24 +71,49 @@ function renderCart() {
 
     document.getElementById("price").innerText = totalSumOfProducts;
 
+
+    // place order check user and cart
     document.getElementById("place-order-btn").addEventListener("click", () => {
-        if (cart.length === 0) {
-            alert("Cart is empty.");
+        const user = JSON.parse(localStorage.getItem("loggedInUser"));
+        const cart = JSON.parse(localStorage.getItem("Cart")) || [];
+    
+        if (!user) {
+            alert("You must be logged in to place an order.");
             return;
         }
+    
+        if (cart.length === 0) {
+            alert("Your cart is empty.");
+            return;
+        }
+    
+        const order = {
+            user: {
+                name: user.name,
+                email: user.email
+            },
+            items: cart,
+            orderDate: new Date().toISOString()
+        };
+    
+        // set order into localstorage 
+        let orders = JSON.parse(localStorage.getItem("orders")) || [];
+        orders.push(order);
+        localStorage.setItem("orders", JSON.stringify(orders));
+        
 
+        // Clear cart after placing order
+        localStorage.removeItem("cart");
+    
         alert("Order placed successfully!");
-        cart = [];
-        updateLocalStorage();
-        renderCart();
-
-        window.location.href = "thankyou.html";
+    
+        
+        window.location.href = "thankyou.html"; 
     });
-
-
+    
 }
 
 
+
+
 document.addEventListener("DOMContentLoaded", renderCart);
-
-

@@ -81,12 +81,12 @@ document.getElementById("sign-IN").addEventListener("submit", function (e) {
     }
 
     if (foundUser) {
-
         alert("Welcome back, " + foundUser.name + "!");
-        document.getElementById('L_password').value;
-        document.getElementById('L_email').value;
-        window.location.href = "index.html";
 
+        // Save current user to localStorage
+        localStorage.setItem("loggedInUser", JSON.stringify(foundUser));
+
+        window.location.href = "index.html";
     } else {
         alert("Invalid email or password.");
     }
