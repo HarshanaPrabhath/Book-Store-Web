@@ -82,6 +82,7 @@ const cardContainer = document.querySelector(".container");
 const cardContainer2 = document.getElementById("container2");
 const cardContainer3 = document.getElementById("container3");
 
+// calling functions
 renderBooks(cardContainer);
 renderBooks(cardContainer2);
 renderBooks(cardContainer3);
@@ -89,10 +90,13 @@ renderBooks(cardContainer3);
 
 // Cart functionality
 document.addEventListener("DOMContentLoaded", () => {
-    const buttons = document.querySelectorAll(".addCart");
+    const buttons = document.querySelectorAll(".addCart"); // get all button on the page 
 
+    // each button performe on click run this code segmentation
     buttons.forEach((button) => {
         button.addEventListener("click", () => {
+            
+            // create product object to save Cart
             const product = {
                 image: button.dataset.image,
                 id: button.dataset.id,
@@ -103,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
             };
 
 
-            // Get cart from localStorage
+            // Get cart from localStorage ====> to check is Product Avilibility
             let cart = JSON.parse(localStorage.getItem("Cart")) || [];
 
             // Check if product exists
@@ -122,8 +126,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 cart.push(product);
             }
 
-            // Save the localStorage
+            // Save the localStorage to =====> cart Array
             localStorage.setItem("Cart", JSON.stringify(cart));
+
             alert(`${product.title} added to cart!`);
         });
     });

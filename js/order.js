@@ -1,12 +1,15 @@
 
 
 function renderOrders() {
+  // Rendering place
   const orderList = document.getElementById("Order-List");
+  
+  // get Orders Array from LocalStorage
   const orders = JSON.parse(localStorage.getItem("orders")) || [];
 
   // get Order's on the array outter loop
   orders.forEach((order, index) => {
-    const formattedDate = (order.orderDate)
+    const formattedDate = (order.orderDate) // Format Date
       ? new Date(order.orderDate).toLocaleString()
       : "Unknown Date";
 
@@ -15,11 +18,10 @@ function renderOrders() {
 
     // get iteams on the array inner loop
     order.items.forEach(item => {
-
-      const itemTotal = item.price * item.quantity;
+      const itemTotal = item.price * item.quantity; // calculate iteam wise total
       total += itemTotal;
       orderedItems +=
-        `
+      `
         <div class="item">
             
             <div><strong>${item.title}</strong></div>
@@ -28,10 +30,11 @@ function renderOrders() {
             
         </div>
 
-                `;
+      `;
     });
 
-
+    
+    // set Orders-cards to Rendering place
     orderList.innerHTML +=
       `
     <div class="card-order">
@@ -49,4 +52,5 @@ function renderOrders() {
   });
 }
 
+// Calling Function
 renderOrders();

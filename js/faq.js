@@ -41,10 +41,12 @@ const questionsArray = [
     }
 ];
 
-
+// palce that FAQ Card puts on
 const questionsContainer=document.getElementById("container-box");
 
+// function that call to get question 
 const  questionsArrayShow= () => {
+    // loop the array call questions Array
     questionsArray.map((data) => {
         questionsContainer.innerHTML +=
         `
@@ -64,5 +66,6 @@ const  questionsArrayShow= () => {
 };
 
 
+// calling function
 questionsArrayShow();
 
