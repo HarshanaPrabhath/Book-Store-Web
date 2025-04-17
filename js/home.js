@@ -1,3 +1,82 @@
+const arrayFeaturedBook = [
+  {
+    id: 1,
+    imageUrl: "assets/product page images/S4.jpg",
+    bookName: "Gangaru Puda Kavi",
+    author: "Liam Carter",
+    price: "950",
+    description: "A gripping fantasy novel set in a parallel world.",
+  },
+  {
+    id: 2,
+    imageUrl: "assets/product page images/S5.jpg",
+    bookName: "Sinhala Sahithya",
+    author: "Sophia Wells",
+    price: "2700",
+    description: "An epic tale of betrayal and redemption.",
+  },
+  {
+    id: 3,
+    imageUrl: "assets/product page images/S6.jpg",
+    bookName: "Viyarana Yathura",
+    author: "Ethan Blake",
+    price: "1700",
+    description: "A time-travel adventure with unexpected consequences.",
+  },
+  {
+    id: 4,
+    imageUrl: "assets/product page images/T1.jpg",
+    bookName: "Thirukkaral",
+    author: "W.H.Drew",
+    price: "1800",
+    description: "A thrilling mystery novel with unexpected twists.",
+  },
+  {
+    id: 5,
+    imageUrl: "assets/product page images/T2.jpg",
+    bookName: "Indulaima",
+    author: "D.H.Kavilma",
+    price: "1200",
+    description: "A poetic journey through love and loss.",
+  },
+  {
+    id: 6,
+    imageUrl: "assets/product page images/T3.jpg",
+    bookName: "Pongatuk",
+    author: "Ramanisanthiran",
+    price: "2300",
+    description: "A cyber-thriller that explores the dangers of encryption.",
+  },
+];
+
+const arrayNewArrivalBook=[
+  {
+    id: 1,
+    imageUrl: "assets/product page images/S3.jpg",
+    bookName: "Ganga Addara",
+    author: "Dan Croft",
+    price: "2300",
+    description: "A cyber-thriller that explores the dangers of encryption.",
+  },
+  {
+    id: 2,
+    imageUrl: "assets/product page images/S2.jpg",
+    bookName: "Sinahal Anduwa",
+    author: "Ella Brooks",
+    price: "1200",
+    description: "A poetic journey through love and loss.",
+  },
+  {
+    id: 9,
+    imageUrl: "assets/product page images/3.png",
+    bookName: "Student Diary",
+    author: "Dan Croft",
+    price: "2300",
+    description: "A cyber-thriller that explores the dangers of encryption.",
+  },
+
+];
+
 document.addEventListener("DOMContentLoaded", () => {
   // Slideshow setup
   let slideIndex = 1;
@@ -31,66 +110,8 @@ document.addEventListener("DOMContentLoaded", () => {
     dots[slideIndex - 1].className += " active";
   }
 
-  // Book rendering
-  const arrayData = [
-    {
-      id: 1,
-      imageUrl:
-        "/assets/product page images/matt-ridley-H-LIL57PHCc-unsplash.jpg",
-      bookName: "The Silent Echo",
-      author: "John Rivers",
-      price: "2300",
-      description: "A thrilling mystery novel with unexpected twists.",
-    },
-    {
-      id: 2,
-      imageUrl:
-        "/assets/product page images/matt-ridley-H-LIL57PHCc-unsplash.jpg",
-      bookName: "Whispers of the Wind",
-      author: "Ella Brooks",
-      price: "2400",
-      description: "A poetic journey through love and loss.",
-    },
-    {
-      id: 3,
-      imageUrl:
-        "/assets/product page images/matt-ridley-H-LIL57PHCc-unsplash.jpg",
-      bookName: "Digital Fortress",
-      author: "Dan Croft",
-      price: "2500",
-      description: "A cyber-thriller that explores the dangers of encryption.",
-    },
-    {
-      id: 4,
-      imageUrl:
-        "/assets/product page images/matt-ridley-H-LIL57PHCc-unsplash.jpg",
-      bookName: "Shadow of Destiny",
-      author: "Liam Carter",
-      price: "2600",
-      description: "A gripping fantasy novel set in a parallel world.",
-    },
-    {
-      id: 5,
-      imageUrl:
-        "/assets/product page images/matt-ridley-H-LIL57PHCc-unsplash.jpg",
-      bookName: "The Last Heir",
-      author: "Sophia Wells",
-      price: "2700",
-      description: "An epic tale of betrayal and redemption.",
-    },
-    {
-      id: 6,
-      imageUrl:
-        "/assets/product page images/matt-ridley-H-LIL57PHCc-unsplash.jpg",
-      bookName: "Lost in Time",
-      author: "Ethan Blake",
-      price: "2800",
-      description: "A time-travel adventure with unexpected consequences.",
-    },
-  ];
-
-  const renderBooks = (container) => {
-    arrayData.forEach((data) => {
+const renderBooks = (container,array) => {
+  array.forEach((data) => {
       container.innerHTML += `
         <div class="containerCard">
             <div class="imageBox">
@@ -117,8 +138,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const container1 = document.querySelector(".container-Featured-Book");
   const container2 = document.querySelector(".container-New-Book");
-  renderBooks(container1);
-  renderBooks(container2);
+  renderBooks(container1,arrayFeaturedBook);
+  renderBooks(container2,arrayNewArrivalBook);
 
   //==================> Cart functionality(becuase there are some product show on home page)<======
 
