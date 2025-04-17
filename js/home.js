@@ -77,40 +77,60 @@ const arrayNewArrivalBook=[
 
 ];
 
-document.addEventListener("DOMContentLoaded", () => {
+// Silder case=========>
+let slideIndex = 1;
+
+function renderSlider() {
   // Slideshow setup
-  let slideIndex = 1;
   showSlides(slideIndex);
 
-  function plusSlides(n) {
-    showSlides((slideIndex += n));
+  // Add event listeners for the dots
+  const dots = document.getElementsByClassName("dot");
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].addEventListener("click", function() {
+      currentSlide(i + 1); // Click on a dot, go to the respective slide
+    });
   }
-
+  
   function currentSlide(n) {
-    showSlides((slideIndex = n));
+    showSlides(slideIndex = n);
   }
 
   function showSlides(n) {
-    let i;
     let slides = document.getElementsByClassName("mySlides");
     let dots = document.getElementsByClassName("dot");
+
+    // If we exceed the total number of slides, start again from 1
     if (n > slides.length) {
       slideIndex = 1;
     }
+    // If we go below 1, go to the last slide
     if (n < 1) {
       slideIndex = slides.length;
     }
-    for (i = 0; i < slides.length; i++) {
+
+    // Hide all slides
+    for (let i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
     }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-  }
 
-const renderBooks = (container,array) => {
+    // Remove the "active" class from all dots
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].classList.remove("active");
+    }
+
+    // Show the current slide and activate the corresponding dot
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].classList.add("active");
+  }
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  //slider call
+  renderSlider();
+
+  const renderBooks = (container,array) => {
   array.forEach((data) => {
       container.innerHTML += `
         <div class="containerCard">
