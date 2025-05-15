@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const nav = document.getElementById("nav");
-  const hamburger = document.getElementById("hamburger");
-  const closeIcon = document.getElementById("close-icon");
+    const nav = document.getElementById("nav");
+    const hamburger = document.getElementById("hamburger");
+    const closeIcon = document.getElementById("close-icon");
 
-  hamburger.addEventListener("click", () => {
-      nav.classList.add("show-nav");
-  });
+    hamburger.addEventListener("click", () => {
+        nav.classList.add("show-nav");
+    });
 
-  closeIcon.addEventListener("click", () => {
-      nav.classList.remove("show-nav");
-  });
+    closeIcon.addEventListener("click", () => {
+        nav.classList.remove("show-nav");
+    });
 });
 
 //================>Login/logout<===============================

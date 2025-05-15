@@ -4,10 +4,10 @@ body{
 }
 
 .container-feedback{
-    margin-top: 50px;
-    display: grid;
-    align-items: center;
+    height: 100vh; 
+    display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .inner-feedback{
@@ -95,3 +95,34 @@ body{
     margin: 0;
 }
 
+@media (max-width: 523px) {
+    .inner-feedback {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .feedback-body textarea {
+      height: 200px;
+    }
+  
+    .container-feedbacks {
+      grid-template-columns: 1fr;
+      padding: 10px;
+    }
+  
+    .feedback-card {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .user-info {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+    }
+  
+    .submit-btn {
+      font-size: 1rem;
+    }
+  }
+  
