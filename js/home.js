@@ -158,6 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const container1 = document.querySelector(".container-Featured-Book");
   const container2 = document.querySelector(".container-New-Book");
+  
   renderBooks(container1,arrayFeaturedBook);
   renderBooks(container2,arrayNewArrivalBook);
 
