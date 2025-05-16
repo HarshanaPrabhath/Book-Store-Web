@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
     renderBooks(container2);
 
 
-//==================> Cart functionality(becuase there are some product show on home page)<======
+    //==================> Cart functionality(becuase there are some product show on home page)<======
 
     // get all button on the class name call addCart
     const buttons = document.querySelectorAll(".addCart");
@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 cart.push(product);
             }
-            
+
             // save back cart on local storeage
             localStorage.setItem("Cart", JSON.stringify(cart));
             alert(`${product.title} added to cart!`);

@@ -84,6 +84,7 @@ function renderCart() {
 
     // place order check user and cart
     document.getElementById("place-order-btn").addEventListener("click", () => {
+        
         // currently log user get AND  get Cart of that user
         const user = JSON.parse(localStorage.getItem("loggedInUser"));
         const cart = JSON.parse(localStorage.getItem("Cart")) || [];
@@ -117,7 +118,6 @@ function renderCart() {
         // set order into localstorage 
         localStorage.setItem("orders", JSON.stringify(orders));
         
-
         // Clear cart after placing order
         localStorage.removeItem("Cart");
     

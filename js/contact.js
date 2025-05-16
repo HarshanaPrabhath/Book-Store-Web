@@ -1,4 +1,3 @@
-
 //============>form when submit this trigger<============
 document.getElementById('myForm').onsubmit = function (e) {
     e.preventDefault(); //prevent defualt submition 

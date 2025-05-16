@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // if submit button click
     submitBtn.addEventListener("click", () => {
-        
+
         // get input feilds values
         const name = nameInput.value.trim();
         const email = emailInput.value.trim();
@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // create html element====> [div]
             const card = document.createElement("div");
             card.className = "container-feed-Card"; //add that div class to style
+
             card.innerHTML = `
                 <div class="feedback-card">
                 <div class="user-info">
@@ -33,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
 
             `;
-            
+
             // append the card for showing
             feedbackContainer.appendChild(card);
             // clear input feilds function 
@@ -46,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function clearTextFeilds() {
-    document.getElementById("name").value="";
-    document.getElementById("email").value="";
-    document.getElementById("message").value="";
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
 }
