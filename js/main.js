@@ -24,6 +24,7 @@ if (user) {
     userInfo.style.display = "inline-block";
     userInfo.innerHTML = `<p class="user-logged">${user.name}</p>`;
     authAction.innerText = "Logout"; //log out text appear
+
     // if logout text were click remove loggedInUser(so remove current log user) and redirect to login page 
     authAction.addEventListener("click", (e) => {
         e.preventDefault();

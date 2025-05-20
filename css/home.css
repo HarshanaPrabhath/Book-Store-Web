@@ -172,6 +172,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.addCart:hover{
+  color: black;
+}
+
 .card-img-top:hover {
   cursor: pointer;
 }

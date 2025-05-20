@@ -6,23 +6,53 @@ body {
     background-color: #f8f9fa;
 }
 
-
-#Order-List{
-  display: grid;
-  align-items: center;
-  gap: 30px;
+#Order-List {
+    display: grid;
+    align-items: center;
+    gap: 30px;
 }
 
-.card-order{
-  background-color: #a4b5c6;
-  padding: 20px;
-  border-radius: 8px;
+.card-order {
+    background-color: #a4b5c6;
+    padding: 20px;
+    border-radius: 8px;
+
+    /* Animation */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.container-products{
-  display: grid;
-  align-items: center;
-  gap: 20px;
-  margin-top: 20px;
-  margin-bottom:20px;
+.card-order:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container-products {
+    display: grid;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    /* Optional animation */
+    animation: fadeInSlow 1s ease-in;
+}
+
+/* Fade-in keyframes */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInSlow {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

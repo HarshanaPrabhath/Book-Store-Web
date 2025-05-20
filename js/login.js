@@ -34,7 +34,7 @@ document.getElementById("sign-UP").addEventListener("submit", (e) => {
     // checking user avilibility
     let userExists = false;
     for (let i = 0; i < users.length; i++) {
-        if (users[i].email === email) {
+        if (users[i].email === email) { 
             userExists = true;
             break;
         }

@@ -37,7 +37,7 @@ const questionsArray = [
     },
     {
         question: "How do I contact customer support?",
-        answer: "You can reach us via our Contact Us page, or email support@yourbookshop.com."
+        answer: "You can reach us via our Contact Us page, or email readify@gmail.com."
     }
 ];
 

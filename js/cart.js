@@ -6,18 +6,17 @@ function updateLocalStorage() {
     localStorage.setItem("Cart", JSON.stringify(cart));
 }
 
-// render card function
+// Render Cart Items
 function renderCart() {
-    
+
     // showing card on the DOM
     let cartContainer = document.getElementById("inner-cart");
     cartContainer.innerHTML = "";
-
+    
     // cart array looping
     cart.forEach((data, index) => {
         let cartCard = document.createElement("div");
         cartCard.classList.add("cart-Card");
-
         cartCard.innerHTML = `
             <img src="${data.image}" alt="Product Image" class="image-resize">
             <div class="description">${data.title}</div>
@@ -32,12 +31,12 @@ function renderCart() {
                 <button class="delete-btn" data-index="${index}">X</button>
             </div>
         `;
+
         // append the cartCard to showing on the DOM
         cartContainer.appendChild(cartCard);
     });
-    
 
-    // Delete functionality
+        // Delete functionality
     document.querySelectorAll(".delete-btn").forEach(button => { //get all button on the cart [delete-btn]
         button.addEventListener("click", (e) => { //one of button click trigger
             const index = e.currentTarget.dataset.index;
@@ -46,6 +45,7 @@ function renderCart() {
             renderCart();          // render card function again so we can see the what happens
         });
     });
+
 
     // Increment functionality
     document.querySelectorAll(".btn-plus").forEach(button => {
@@ -56,6 +56,7 @@ function renderCart() {
             renderCart();            // render card function again so we can see the what happens
         });
     });
+
 
     // Decrement functionality
     document.querySelectorAll(".btn-minus").forEach(button => {
@@ -71,7 +72,6 @@ function renderCart() {
         });
     });
 
-
     // cart price show case 
     let totalSumOfProducts = 0.00;
     for (let i = 0; i < cart.length; i++) {
@@ -80,55 +80,55 @@ function renderCart() {
 
     // set the value to DOM
     document.getElementById("price").innerText = totalSumOfProducts;
+    
+}
 
 
+// Place Order
+document.addEventListener("DOMContentLoaded", () => {
+    renderCart();
+
+    
+    const placeOrderBtn = document.getElementById("place-order-btn");
+    
     // place order check user and cart
-    document.getElementById("place-order-btn").addEventListener("click", () => {
-        
+    placeOrderBtn.addEventListener("click", () => {
+
         // currently log user get AND  get Cart of that user
         const user = JSON.parse(localStorage.getItem("loggedInUser"));
-        const cart = JSON.parse(localStorage.getItem("Cart")) || [];
         
         // check user avilibility
         if (!user) {
             alert("You must be logged in to place an order.");
             return;
         }
-    
+
         // check cart length
         if (cart.length === 0) {
             alert("Your cart is empty.");
             return;
         }
-        
+
         // create order Object
         const order = {
             user: {
                 name: user.name,
                 email: user.email
             },
-            items: cart, //cart
-            orderDate: new Date().toISOString() //date
+            items: cart,
+            orderDate: new Date().toISOString()
         };
-    
+
         // get order into localstorage 
         let orders = JSON.parse(localStorage.getItem("orders")) || [];
         orders.push(order);
-        
-        // set order into localstorage 
         localStorage.setItem("orders", JSON.stringify(orders));
-        
+
         // Clear cart after placing order
         localStorage.removeItem("Cart");
-    
         alert("Order placed successfully!");
 
-        window.location.href = "thankyou.html"; 
+        // redirect to thankyou.html page
+        window.location.href = "thankyou.html";
     });
-    
-}
-
-
-
-// calling
-document.addEventListener("DOMContentLoaded", renderCart);
+});
