@@ -33,7 +33,6 @@ function renderOrders() {
       `;
     });
 
-    
     // set Orders-cards to Rendering place
     orderList.innerHTML +=
       `
