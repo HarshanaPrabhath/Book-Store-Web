@@ -45,7 +45,7 @@ function renderOrders() {
         <hr>
         <h3 style="margin-top:10px;">Total price of Order is: Rs.<span id="order-total">${total}</span></h3>
       </div>
-
+      <br>
     `;
 
   });
