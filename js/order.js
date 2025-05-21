@@ -5,7 +5,7 @@ function renderOrders() {
   const orderList = document.getElementById("Order-List");
   
   // get Orders Array from LocalStorage
-  const orders = JSON.parse(localStorage.getItem("orders")) || [];
+  const orders = JSON.parse(localStorage.getItem("paidOrders")) || [];
 
   // get Order's on the array outter loop
   orders.forEach((order, index) => {

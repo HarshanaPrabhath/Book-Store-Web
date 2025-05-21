@@ -126,9 +126,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Clear cart after placing order
         localStorage.removeItem("Cart");
-        alert("Order placed successfully!");
 
         // redirect to thankyou.html page
-        window.location.href = "thankyou.html";
+        window.location.href = "payment.html";
     });
 });
