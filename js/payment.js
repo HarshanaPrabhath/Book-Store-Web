@@ -73,5 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("paidOrders", JSON.stringify(paidOrders));
 
         window.location.href = "thankyou.html"; 
+        
     });
 });

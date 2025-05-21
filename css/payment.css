@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f2f2f2;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
   margin: 0;
   padding: 0;
   display: flex;
@@ -10,81 +13,81 @@ body {
 }
 
 .payment-container {
-  background-color: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-  width: 400px;
-  max-width: 90%;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.payment-container h2 {
+h2 {
   text-align: center;
-  margin-bottom: 20px;
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+.payment-form {
+  width: 100%;
 }
 
 .payment-form label {
   display: block;
-  margin: 12px 0 6px;
+  margin-bottom: 6px;
+  color: #444;
   font-weight: 500;
+  font-size: 15px;
 }
 
 .payment-form input {
   width: 100%;
-  padding: 10px;
+  padding: 10px 14px;
+  margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
   box-sizing: border-box;
+}
+
+.payment-form input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.3);
 }
 
 .card-details {
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .card-details div {
-  flex: 1;
+  flex: 1 1 48%;
 }
 
-.payment-form button {
-  margin-top: 20px;
-  width: 100%;
-  padding: 12px;
-  background-color: #007bff;
+.payButton {
+  background-color: #4a90e2;
   color: white;
-  font-weight: bold;
   border: none;
+  padding: 12px;
+  font-size: 16px;
+  width: 100%;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background-color 0.3s ease, transform 0.2s;
 }
 
-.payment-form button:hover {
-  background-color: #0056b3;
+.payButton:hover {
+  background-color: #3c7dc3;
+  transform: scale(1.03);
 }
 
 .payment-summary {
-  margin-top: 30px;
-  background: #fafafa;
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #eee;
-}
-
-.payment-summary h3 {
-  margin-top: 0;
-}
-
-.payment-summary p {
-  margin: 6px 0;
-}
-
-.payment-summary .total {
-  font-size: 18px;
-  color: #333;
-}
-
-.list-product{
-    list-style: none;
+  margin-top: 20px;
+  text-align: center;
+  color: #555;
+  font-size: 15px;
 }
