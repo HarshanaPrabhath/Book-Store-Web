@@ -27,7 +27,7 @@
         <ul>
           <li><a href="./index.html">Home</a></li>
           <li><a href="./product.php">Books</a></li>
-          <li><a href="./aboutus.html">About Us</a></li>
+          <li><a href="./aboutus.php">About Us</a></li>
           <li><a href="./contact.php">Contact Us</a></li>
           <li><a href="./cart.html">Cart</a></li>
 
@@ -59,7 +59,7 @@
             offering a carefully curated collection of classics, bestsellers, and hidden gems.</p>
           <p>We offer a cozy reading environment, personalized book recommendations, and special literary events to
             bring readers and writers together.</p>
-          <a href="contact.html" class="btn">Contact Us</a>
+          <a href="./contact.php" class="btn">Contact Us</a>
         </div>
       </div>
     </div>
@@ -137,7 +137,7 @@
         <h4>Useful Links</h4>
         <ul class="links">
           <li><a href="./index.html">Home</a></li>
-          <li><a href="./aboutus.html">About Us</a></li>
+          <li><a href="./aboutus.php">About Us</a></li>
           <li><a href="./contact.html">Contact Us</a></li>
           <li><a href="./cart.html">Cart</a></li>
           <li><a href="./orders.html">Orders</a></li>
@@ -156,7 +156,7 @@
         <h4>Legal</h4>
         <ul class="links">
           <li><a href="/policy.html">Privacy Policy</a></li>
-          <li><a href="/FAQ.php">FAQ</a></li>
+          <li><a href="./FAQ.php">FAQ</a></li>
         </ul>
       </div>
       <div class="footer-col">

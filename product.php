@@ -27,7 +27,7 @@
         <ul>
           <li><a href="./index.html">Home</a></li>
           <li><a href="./product.php">Books</a></li>
-          <li><a href="./aboutus.html">About Us</a></li>
+          <li><a href="./aboutus.php">About Us</a></li>
           <li><a href="./contact.php">Contact Us</a></li>
           <li><a href="./cart.html">Cart</a></li>
 
@@ -95,7 +95,7 @@
         <h4>Useful Links</h4>
         <ul class="links">
           <li><a href="./index.html">Home</a></li>
-          <li><a href="./aboutus.html">About Us</a></li>
+          <li><a href="./aboutus.php">About Us</a></li>
           <li><a href="./contact.html">Contact Us</a></li>
           <li><a href="./cart.html">Cart</a></li>
           <li><a href="./orders.html">Orders</a></li>
