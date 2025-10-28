@@ -7,8 +7,8 @@
   <title>READIFY Bookstore</title>
   <link rel="icon" type="image/png" href="/assets/img-title.png">
 
-  <link rel="stylesheet" href="css/common.css" />
-  <link rel="stylesheet" href="css/product.css" />
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/product.css" />
 </head>
 
 <body>
@@ -26,9 +26,9 @@
         <button class="close-icon" id="close-icon">&times;</button>
         <ul>
           <li><a href="./index.html">Home</a></li>
-          <li><a href="./product.html">Books</a></li>
+          <li><a href="./product.php">Books</a></li>
           <li><a href="./aboutus.html">About Us</a></li>
-          <li><a href="./contact.html">Contact Us</a></li>
+          <li><a href="./contact.php">Contact Us</a></li>
           <li><a href="./cart.html">Cart</a></li>
 
           <li id="user-info"></li>
@@ -41,16 +41,51 @@
   </header>
 
   <div class="content">
-    <h1>Sinhala</h1>
-    <hr />
-    <div class="container"></div>
-    <h1>English</h1>
-    <hr />
-    <div class="container" id="container2"></div>
+    <?php
+    require_once 'config/db_connection.php';
+    $conn->set_charset("utf8"); // Ensure Sinhala text works
 
-    <h1>Tamil</h1>
-    <hr />
-    <div class="container" id="container3"></div>
+    // Start the session to handle the cart
+    session_start();
+
+    // Get books for each category
+    $categories = ['English', 'Sinhala', 'Tamil'];
+
+    foreach ($categories as $category) {
+      $sql = "SELECT * FROM books WHERE category = '$category'";
+      $result = mysqli_query($conn, $sql);
+
+      if ($result && mysqli_num_rows($result) > 0) {
+        echo "<h1>$category</h1><hr />";
+        echo "<div class='container'>";
+
+        while ($book = mysqli_fetch_assoc($result)) {
+          echo "
+                <div class='containerCard'>
+                    <div class='imageBox'> 
+                        <img src='{$book['imageUrl']}' class='img' alt='{$book['bookName']}'>
+                    </div>
+                    <div class='productDetail'>
+                        <p class='bookname'>{$book['bookName']}</p>
+                        <div class='bookauthor'>
+                            <p class='author'>Author : {$book['author']}</p>
+                        </div>
+                        <p class='price'>Rs. {$book['price']}</p>
+                        <p class='description'>{$book['description']}</p>
+                        <a href='add_to_cart.php?book_id={$book['id']}'>
+                            <button class='addCart'>Add to Cart</button>
+                        </a>
+                    </div>
+                </div>";
+        }
+        echo "</div>";
+      }
+    }
+
+    mysqli_close($conn);
+    ?>
+
+
   </div>
 
   <!-- Footer -->
@@ -78,7 +113,7 @@
         <h4>Legal</h4>
         <ul class="links">
           <li><a href="/policy.html">Privacy Policy</a></li>
-          <li><a href="/FAQ.html">FAQ</a></li>
+          <li><a href="/FAQ.php">FAQ</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -95,7 +130,7 @@
     </div>
   </section>
 
-  <script src="./js/product.js"></script>
+
   <script src="./js/main.js"></script>
 </body>
 

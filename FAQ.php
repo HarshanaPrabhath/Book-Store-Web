@@ -1,3 +1,19 @@
+<?php
+require_once 'config/db_connection.php';
+
+// Start the session to handle the cart
+session_start();
+
+// Query to fetch FAQs
+$sql = "SELECT * FROM faq";
+$result = mysqli_query($conn, $sql);
+
+// Check if query was successful
+if (!$result) {
+    die("Error retrieving FAQs: " . mysqli_error($conn));
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,14 +22,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>READIFY Bookstore</title>
   <link rel="icon" type="image/png" href="/assets/img-title.png">
-
-  <link rel="stylesheet" href="css/common.css" />
-  <link rel="stylesheet" href="css/home.css" />
-  <link rel="stylesheet" href="css/order.css" />
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/FaQ.css" />
 </head>
 
 <body>
-  <!--Header -->
+  <!-- Header -->
   <header class="header">
     <div class="container-inner">
       <a href="index.html" class="logo-link">
@@ -31,7 +45,6 @@
           <li><a href="./aboutus.html">About Us</a></li>
           <li><a href="./contact.php">Contact Us</a></li>
           <li><a href="./cart.html">Cart</a></li>
-
           <li id="user-info"></li>
           <li><a href="#" id="auth-action">Sign In</a></li>
         </ul>
@@ -39,35 +52,30 @@
     </div>
   </header>
 
-  <!-- body -->
-  <h1 style="text-align: center;margin-top: 50px;margin-bottom: 50px;">Orders That Purchase</h1>
+  <h2 style="text-align: center; margin-bottom: 30px; margin-top: 60px;">FAQs Unraveled: Your Questions Answered!</h2>
 
-  <!-- render order heree.... -->
-  <div id="Order-List"></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <div class="container-box" id="container-box">
+    <?php
+    // Loop through and display each FAQ
+    while ($faq = mysqli_fetch_assoc($result)) {
+        echo "
+          <div class='problem-box'>
+            <h2>" .($faq['question']) . "</h2>
+            <p>" .($faq['answer']). "</p>
+          </div>";
+    }
+    ?>
+  </div>
 
   <!-- Footer -->
-  <section class="footer" style="width: 100%;">
+  <section class="footer">
     <div class="footer-row">
       <div class="footer-col">
         <h4>Useful Links</h4>
         <ul class="links">
           <li><a href="./index.html">Home</a></li>
           <li><a href="./aboutus.html">About Us</a></li>
-          <li><a href="./contact.html">Contact Us</a></li>
+          <li><a href="./contact.php">Contact Us</a></li>
           <li><a href="./cart.html">Cart</a></li>
           <li><a href="./orders.html">Orders</a></li>
         </ul>
@@ -77,22 +85,19 @@
         <ul class="links">
           <li><a href="/feedback.html">Customer Feedback</a></li>
           <li><a href="/offers.html">Offers</a></li>
-          <li><a href="/payment.html">payment</a></li>
+          <li><a href="/payment.html">Payment</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Legal</h4>
         <ul class="links">
           <li><a href="/policy.html">Privacy Policy</a></li>
-          <li><a href="/FAQ.html">FAQ</a></li>
+          <li><a href="/FAQ.php">FAQ</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Newsletter</h4>
-        <p>
-          Subscribe to our newsletter for a weekly dose of news, updates,
-          helpful tips, and exclusive offers.
-        </p>
+        <p>Subscribe to our newsletter for a weekly dose of news, updates, helpful tips, and exclusive offers.</p>
         <form action="#">
           <input type="text" placeholder="Your email" required />
           <button type="submit">SUBSCRIBE</button>
@@ -102,7 +107,10 @@
   </section>
 
   <script src="js/main.js"></script>
-  <script src="js/order.js"></script>
 </body>
 
 </html>
+
+<?php
+mysqli_close($conn);
+?>
