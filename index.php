@@ -1,3 +1,36 @@
+<?php
+require_once 'config/db_connection.php';
+
+// =============================
+// FETCH FEATURED BOOKS (last 5)
+// =============================
+$featuredBooks = [];
+$result = mysqli_query($conn, "SELECT * FROM books ORDER BY id DESC LIMIT 5");
+while ($row = mysqli_fetch_assoc($result)) {
+  $featuredBooks[] = $row;
+}
+
+// =============================
+// FETCH NEW ARRIVALS (all books)
+// =============================
+$newBooks = [];
+$result = mysqli_query($conn, "SELECT * FROM books ORDER BY id DESC LIMIT 3");
+while ($row = mysqli_fetch_assoc($result)) {
+  $newBooks[] = $row;
+}
+
+// =============================
+// FETCH FAQS
+// =============================
+$faqs = [];
+$result = mysqli_query($conn, "SELECT * FROM faq ORDER BY id ASC");
+while ($row = mysqli_fetch_assoc($result)) {
+  $faqs[] = $row;
+}
+
+mysqli_close($conn);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,9 +39,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>READIFY Bookstore</title>
   <link rel="icon" type="image/png" href="/assets/img-title.png" />
-
-  <link rel="stylesheet" href="css/common.css" />
-  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/home.css" />
 </head>
 
 <body>
@@ -39,7 +71,7 @@
     </div>
   </header>
 
-  <!--Slider-->
+  <!--Slider Section -->
   <div class="container-slider">
     <div class="inner-container-slider">
       <div class="slideshow-container">
@@ -66,7 +98,6 @@
     </div>
   </div>
 
-  <!--Info Section-->
   <div class="container-info">
     <div class="container-info-box">
       <img src="./assets/shipping-icon.png" alt="..." class="image-info-resize" />
@@ -93,11 +124,34 @@
     </div>
   </div>
 
-  <!--Featured Book-->
-  <h1 style="text-align: center; margin-bottom:60px;">Featured Book</h1>
-
-  <!-- Render -->
-  <div class="container-Book container-Featured-Book"></div>
+  <!-- Featured Books -->
+  <section id="featured" class="section">
+    <h2 style="text-align: center;">Featured Books</h2>
+      <div class="container-Book container-New-Book">
+      <?php foreach ($featuredBooks as $book): ?>
+        <div class="containerCard">
+          <div class="imageBox">
+            <img src="<?= htmlspecialchars($book['imageUrl']) ?>" class="card-img" />
+          </div>
+          <div class="productDetail">
+            <p class="bookname"><?= htmlspecialchars($book['bookName']) ?></p>
+            <div class="bookauthor">
+              <p class="bookauthor">Author : <?= htmlspecialchars($book['author']) ?></p>
+            </div>
+            <p class="price">Rs.<?= htmlspecialchars($book['price']) ?></p>
+            <p class="rate">Ratings : 5.0⭐</p>
+            <button class="addCart"
+              data-id="<?= $book['id'] ?>"
+              data-title="<?= htmlspecialchars($book['bookName']) ?>"
+              data-price="<?= htmlspecialchars($book['price']) ?>"
+              data-image="<?= htmlspecialchars($book['imageUrl']) ?>">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </section>
 
   <!--mini info for discount -->
   <div class="container-discount">
@@ -114,6 +168,8 @@
       <img src="./assets/discount-image.png" alt="..." />
     </div>
   </div>
+
+
 
   <div class="container-info-mini">
     <div class="info">
@@ -157,12 +213,33 @@
     </div>
   </div>
 
-  <!--New Arrivals Book-->
-  <h1 style="text-align: center;margin-bottom: 40px;">New Arrivals Book</h1>
 
-
-  <!-- Render -->
-  <div class="container-Book container-Featured-Book container-New-Book"></div>
+  <!-- New Arrivals -->
+  <h1 style="text-align: center; margin-bottom: 40px;">New Arrivals</h1>
+  <div class="container-Book container-New-Book">
+    <?php foreach ($newBooks as $book): ?>
+      <div class="containerCard">
+        <div class="imageBox">
+          <img src="<?= htmlspecialchars($book['imageUrl']) ?>" class="card-img" />
+        </div>
+        <div class="productDetail">
+          <p class="bookname"><?= htmlspecialchars($book['bookName']) ?></p>
+          <div class="bookauthor">
+            <p class="bookauthor">Author : <?= htmlspecialchars($book['author']) ?></p>
+          </div>
+          <p class="price">Rs.<?= htmlspecialchars($book['price']) ?></p>
+          <p class="rate">Ratings : 5.0⭐</p>
+          <button class="addCart"
+            data-id="<?= $book['id'] ?>"
+            data-title="<?= htmlspecialchars($book['bookName']) ?>"
+            data-price="<?= htmlspecialchars($book['price']) ?>"
+            data-image="<?= htmlspecialchars($book['imageUrl']) ?>">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    <?php endforeach; ?>
+  </div>
 
 
   <!--bottom box -->
@@ -187,7 +264,7 @@
       <div class="footer-col">
         <h4>Explore</h4>
         <ul class="links">
-          <li><a href="/feedback.html">Customer Feedback</a></li>
+          <li><a href="./feedback.php">Customer Feedback</a></li>
           <li><a href="/offers.html">Offers</a></li>
           <li><a href="/payment.html">payment</a></li>
         </ul>
@@ -213,6 +290,7 @@
       </div>
     </div>
   </section>
+
   <script src="js/main.js"></script>
   <script src="js/home.js"></script>
 </body>
