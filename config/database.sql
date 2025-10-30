@@ -52,6 +52,15 @@ CREATE TABLE IF NOT EXISTS faq (
     answer TEXT NOT NULL
 );
 
+CREATE TABLE IF NOT EXISTS feedback (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    message TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
 INSERT INTO faq (question, answer) VALUES
 ('What types of books do you sell?', 'We offer a wide range of books including fiction, non-fiction, academic, children\'s books, and more.'),
 ('How can I place an order?', 'You can place an order by browsing our collection, adding items to your cart, and proceeding to checkout.'),
