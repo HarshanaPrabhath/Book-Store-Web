@@ -47,6 +47,22 @@ const arrayFeaturedBook = [
     price: "2300",
     description: "A cyber-thriller that explores the dangers of encryption.",
   },
+  {
+    id: 10,
+    imageUrl: "assets/product page images/4.png",
+    bookName: "Sell English",
+    author: "Liam Carter",
+    price: "950",
+    description: "A gripping fantasy novel set in a parallel world.",
+  },
+  {
+    id: 12,
+    imageUrl: "assets/product page images/6.png",
+    bookName: "Bussiness Report",
+    author: "Ethan Blake",
+    price: "1700",
+    description: "A time-travel adventure with unexpected consequences.",
+  },
 ];
 
 const arrayNewArrivalBook=[
@@ -74,6 +90,22 @@ const arrayNewArrivalBook=[
     price: "2300",
     description: "A cyber-thriller that explores the dangers of encryption.",
   },
+  {
+    id: 17,
+    imageUrl: "assets/product page images/T5.jpg",
+    bookName: "Katikiyan",
+    author: "Sophia Wells",
+    price: "2700",
+    description: "An epic tale of betrayal and redemption.",
+  },
+  {
+    id: 18,
+    imageUrl: "assets/product page images/T6.jpg",
+    bookName: "Penmani",
+    author: "Ethan Blake",
+    price: "1700",
+    description: "A time-travel adventure with unexpected consequences.",
+  }
 
 ];
 

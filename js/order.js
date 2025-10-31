@@ -5,7 +5,7 @@ function renderOrders() {
   const orderList = document.getElementById("Order-List");
   
   // get Orders Array from LocalStorage
-  const orders = JSON.parse(localStorage.getItem("orders")) || [];
+  const orders = JSON.parse(localStorage.getItem("paidOrders")) || [];
 
   // get Order's on the array outter loop
   orders.forEach((order, index) => {
@@ -33,7 +33,6 @@ function renderOrders() {
       `;
     });
 
-    
     // set Orders-cards to Rendering place
     orderList.innerHTML +=
       `
@@ -46,7 +45,8 @@ function renderOrders() {
         <hr>
         <h3 style="margin-top:10px;">Total price of Order is: Rs.<span id="order-total">${total}</span></h3>
       </div>
-
+      <br>
+      <br>
     `;
 
   });
