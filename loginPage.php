@@ -62,6 +62,73 @@
     </div>
 
     <script src="./js/login.js"></script>
+
+<?php
+// ---------------------- DATABASE CONNECTION ----------------------
+$host = "localhost";
+$user = "root";
+$pass = "";
+$dbname = "readify_db"; // your database name
+
+$conn = new mysqli($host, $user, $pass, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Database connection failed: " . $conn->connect_error);
+}
+
+// ---------------------- SIGN UP LOGIC ----------------------
+if (isset($_POST['signup'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+
+    // Check if email already exists
+    $check = $conn->prepare("SELECT * FROM users WHERE email = ?");
+    $check->bind_param("s", $email);
+    $check->execute();
+    $result = $check->get_result();
+
+    if ($result->num_rows > 0) {
+        echo "<script>alert('Email already registered!');</script>";
+    } else {
+        $stmt = $conn->prepare("INSERT INTO users (name, email, password) VALUES (?, ?, ?)");
+        $stmt->bind_param("sss", $name, $email, $password);
+        if ($stmt->execute()) {
+            echo "<script>alert('Registration Successful! You can now log in.');</script>";
+        } else {
+            echo "<script>alert('Error during registration.');</script>";
+        }
+        $stmt->close();
+    }
+}
+
+// ---------------------- SIGN IN LOGIC ----------------------
+if (isset($_POST['signin'])) {
+    $email = $_POST['L_email'];
+    $password = $_POST['L_password'];
+
+    $stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows == 1) {
+        $user = $result->fetch_assoc();
+
+        if (password_verify($password, $user['password'])) {
+            session_start();
+            $_SESSION['user_name'] = $user['name'];
+            $_SESSION['user_email'] = $user['email'];
+            echo "<script>alert('Login Successful!'); window.location.href='home.php';</script>";
+        } else {
+            echo "<script>alert('Incorrect password!');</script>";
+        }
+    } else {
+        echo "<script>alert('No account found with that email!');</script>";
+    }
+}
+?>
 </body>
 
 </html>
