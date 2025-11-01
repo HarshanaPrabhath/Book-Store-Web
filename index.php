@@ -1,5 +1,5 @@
 <?php
-require_once 'config/db_connection.php';
+require 'config/db_connection.php';
 
 // =============================
 // FETCH FEATURED BOOKS (last 5)
