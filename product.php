@@ -72,7 +72,7 @@
                         </div>
                         <p class='price'>Rs. {$book['price']}</p>
                         <p class='description'>{$book['description']}</p>
-                        <a href='add_to_cart.php?book_id={$book['id']}'>
+                        <a href='cart.php?book_id={$book['id']}'>
                             <button class='addCart'>Add to Cart</button>
                         </a>
                     </div>
@@ -81,7 +81,7 @@
         echo "</div>";
       }
     }
-
+  
     mysqli_close($conn);
     ?>
 

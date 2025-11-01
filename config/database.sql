@@ -60,6 +60,15 @@ CREATE TABLE IF NOT EXISTS feedback (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+ CREATE TABLE cart (
+  cart_id INT AUTO_INCREMENT PRIMARY KEY,
+  book_id INT NOT NULL,
+  quantity INT NOT NULL DEFAULT 1,
+  image_path VARCHAR(255),
+  added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+ );
+
+
 
 INSERT INTO faq (question, answer) VALUES
 ('What types of books do you sell?', 'We offer a wide range of books including fiction, non-fiction, academic, children\'s books, and more.'),
