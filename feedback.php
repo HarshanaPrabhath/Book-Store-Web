@@ -50,7 +50,7 @@ mysqli_close($conn);
           <li><a href="./product.php">Books</a></li>
           <li><a href="./aboutus.php">About Us</a></li>
           <li><a href="./contact.php">Contact Us</a></li>
-          <li><a href="./cart.html">Cart</a></li>
+          <li><a href="./cart.php">Cart</a></li>
         </ul>
       </nav>
     </div>

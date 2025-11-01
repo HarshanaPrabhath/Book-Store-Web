@@ -26,12 +26,12 @@
       <button class="hamburger" id="hamburger">&#9776;</button>
       <nav class="nav-link" id="nav">
         <button class="close-icon" id="close-icon">&times;</button>
-        <ul>
+       <ul>
           <li><a href="./index.php">Home</a></li>
           <li><a href="./product.php">Books</a></li>
           <li><a href="./aboutus.php">About Us</a></li>
           <li><a href="./contact.php">Contact Us</a></li>
-          <li><a href="./cart.html">Cart</a></li>
+          <li><a href="./cart.php">Cart</a></li>
 
           <li id="user-info"></li>
           <li><a href="#" id="auth-action">Sign In</a></li>
